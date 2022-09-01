@@ -142,11 +142,14 @@ Error generating stack: `+o.message+`
   :hover{
     border:solid 1px white;
   }
-`;function nm(){const[e,t]=fe.useState(""),{addTodo:n,setOpenModal:r}=fe.useContext(Br);return Ge(rm,{onSubmit:s=>{s.preventDefault(),n(e),r(!1)},onKeyPress:s=>{s.charCode===13&&(s.preventDefault(),n(e),r(!1))},children:[D("label",{children:"Que tienes que hacer?"}),D(um,{value:e,onChange:s=>{t(s.target.value)},placeholder:"Escribe tu pendiente"}),Ge(lm,{children:[D(om,{onClick:()=>{r(!1)},children:"Cancelar"}),D(im,{type:"submit",children:"A\xF1adir pendiente"})]})]})}const rm=we.form`
+`;function nm(){const[e,t]=fe.useState(""),{addTodo:n,setOpenModal:r}=fe.useContext(Br);return Ge(rm,{onSubmit:s=>{s.preventDefault(),n(e),r(!1)},onKeyPress:s=>{s.charCode===13&&(s.preventDefault(),n(e),r(!1))},children:[D("label",{children:"\xBFQu\xE9 tienes por hacer?"}),D(um,{value:e,onChange:s=>{t(s.target.value)},placeholder:"Escribe tu pendiente"}),Ge(lm,{children:[D(om,{onClick:()=>{r(!1)},children:"Cancelar"}),D(im,{type:"submit",children:"A\xF1adir pendiente"})]})]})}const rm=we.form`
   display: flex;
   flex-direction: column;
   height: auto;
   width: 250px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
 `,lm=we.div`
   display: flex;
   flex-direction: column;
