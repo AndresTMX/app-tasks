@@ -73,6 +73,7 @@ Error generating stack: `+o.message+`
   background-color: ${e=>e.completed===!0?"green":"red"};
   padding: 8px;
   border-radius: 4px;
+  color: white;
   :hover {
     border: solid 2px #ffffff93;
   }
@@ -172,7 +173,7 @@ Error generating stack: `+o.message+`
   margin: 10px;
   width: 100%;
   background-color: green;
-  colowhiter
+  color: white;
   :hover{
     border: solid 1px white;
   }
