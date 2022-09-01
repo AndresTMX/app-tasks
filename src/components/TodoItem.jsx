@@ -32,6 +32,7 @@ const ContentIconCheck = styled.span`
   background-color: ${(props) => (props.completed === true ? "green" : "red")};
   padding: 8px;
   border-radius: 4px;
+  color: white;
   :hover {
     border: solid 2px #ffffff93;
   }

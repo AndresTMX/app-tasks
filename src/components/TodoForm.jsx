@@ -77,7 +77,7 @@ const BotonAdd = styled.button`
   margin: 10px;
   width: 100%;
   background-color: green;
-  colowhiter
+  color: white;
   :hover{
     border: solid 1px white;
   }
