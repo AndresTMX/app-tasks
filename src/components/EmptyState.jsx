@@ -20,6 +20,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  color: white;
 `;
 
 const Icon = styled.span`
@@ -28,4 +29,5 @@ const Icon = styled.span`
   margin: 10px;
   height: 80px;
   font-size: 70px;
+  color: white;
 `;

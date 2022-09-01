@@ -18,7 +18,7 @@ function UI() {
   React.useContext(TodoContext);
   return (
     <div className="App">
-      <h1>Lista de pendientes</h1>
+      <h1 className="title">Lista de pendientes</h1>
 
       <TodoCounter />
 

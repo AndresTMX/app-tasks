@@ -32,7 +32,7 @@ function TodoForm() {
 
     return ( 
         <Formulario onSubmit={onAdd} onKeyPress={onKeyUp} >
-            <label>Que tienes que hacer?</label>
+            <label>¿Qué tienes por hacer?</label>
             <Input 
              value={newTodoValue}
              onChange={onChangue}
@@ -52,6 +52,9 @@ const Formulario = styled.form`
   flex-direction: column;
   height: auto;
   width: 250px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
 `;
 
 const ContenedorBtn = styled.div`
@@ -64,6 +67,7 @@ const BotonCancel = styled.button`
   margin: 10px;
   width: 100%;
   background-color: red;
+  color: white;
   :hover{
     border: solid 1px white;
   }
@@ -73,6 +77,7 @@ const BotonAdd = styled.button`
   margin: 10px;
   width: 100%;
   background-color: green;
+  colowhiter
   :hover{
     border: solid 1px white;
   }

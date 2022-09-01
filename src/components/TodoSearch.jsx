@@ -10,7 +10,7 @@ function TodoSearch() {
   }
  
     return ( 
-        <Input onChange={onSearchValueChangue} value={searchValue} placeholder='Search todo'></Input>
+        <Input onChange={onSearchValueChangue} value={searchValue} placeholder='Buscar pendientes'></Input>
      );
 }
 
@@ -22,4 +22,7 @@ const Input = styled.input`
   width: 300px;
   padding: 10px;
   border: none;
+  background-color: #3b3b3b;
+  border: solid 1px #272727;
+  color: white;
 `;

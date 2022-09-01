@@ -7,6 +7,7 @@ const styles = {
   left: '-15px',
   fontWeight:'600',
   fontSize:'20px',
+  color:'white'
 }
 
 
@@ -32,6 +33,7 @@ const Btn = styled.button`
   background-color: red;
   align-items: center;
   font-weight: 600;
+  color: white;
   :hover {
     border: 1px solid white;
   }
