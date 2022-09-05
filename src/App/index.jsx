@@ -1,5 +1,9 @@
 import React from "react";
-import { TodoContext } from "../TodoContext";
+//Style App
+import "./App.css"
+//Hooks
+import { useTodos } from "../Hooks/useTodos";
+//Components
 import TodoSearch from "../components/TodoSearch";
 import TodoItem from "../components/TodoItem";
 import TodoCounter from "../components/TodoCounter";
@@ -7,27 +11,41 @@ import TodoList from "../components/TodoList";
 import CreateTodoBtn from "../components/CreateTodoBtn";
 import Modal from "../Modal";
 import CloseModal from "../components/CloseModal";
+//State Aplication Components
 import TodoForm from "../components/TodoForm";
 import EmptyState from "../components/EmptyState";
 import LoadingState from "../components/LoadingState";
-import ErrorState from "../components/ErrorState";
-import "../App.css";
+import ErrorState from "../components/ErrorState"; 
 
-function UI() {
-  const { error, loading, searchedTodos, completeTodo, deleteTodo, openModal, setOpenModal, } =
-  React.useContext(TodoContext);
+function App() {
+  
+  const {
+    loading,
+    error,
+    totalTodos,
+    todosCheck,
+    searchValue,
+    setSearchValue,
+    searchedTodos,
+    completeTodo,
+    deleteTodo,
+    openModal,
+    setOpenModal,
+    addTodo,
+  } = useTodos();
+
   return (
     <div className="App">
       <h1 className="title">Lista de pendientes</h1>
 
-      <TodoCounter />
+      <TodoCounter totalTodos={totalTodos} todosCheck={todosCheck} />
 
-      <TodoSearch />
+      <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
 
       <TodoList>
         {error && <ErrorState error={error} />}
-        {loading && <LoadingState/> }
-        {(!loading && !searchedTodos.length) && <EmptyState/> }
+        {loading && <LoadingState />}
+        {!loading && !searchedTodos.length && <EmptyState />}
 
         {searchedTodos.map((todo) => (
           <TodoItem
@@ -42,16 +60,14 @@ function UI() {
 
       {openModal && (
         <Modal>
-          <CloseModal setOpenModal={setOpenModal}/>
-          <TodoForm/>
-      </Modal>
+          <CloseModal setOpenModal={setOpenModal} />
+          <TodoForm addTodo={addTodo} setOpenModal={setOpenModal} />
+        </Modal>
       )}
 
-      <CreateTodoBtn
-      setOpenModal={setOpenModal}
-      />
+      <CreateTodoBtn setOpenModal={setOpenModal} />
     </div>
   );
 }
 
-export default UI;
+export default App;
