@@ -1,6 +1,7 @@
 import React from 'react';
 
 function useLocalStorage(itemName, initialValue) {
+  
     const [error, setError] = React.useState(false);
     const [loading, setLoading] = React.useState(initialValue);
     const [item, setItem] = React.useState(initialValue);
@@ -32,6 +33,7 @@ function useLocalStorage(itemName, initialValue) {
         const stringifieldItem = JSON.stringify(newItem);
         localStorage.setItem(itemName, stringifieldItem);
         setItem(newItem);
+        
       } catch (error) {
         setError(error);
       }

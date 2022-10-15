@@ -8,8 +8,8 @@ const LoadingState = props => {
       width={350}
       height={160}
       viewBox="0 0 400 160"
-      backgroundColor="#3b3b3b"
-      foregroundColor="#4d4d4d"
+      backgroundColor="#5333ed"
+      foregroundColor="#DA22FF"
       {...props}
     >
       <rect x="50" y="6" rx="4" ry="4" width="330" height="40" />

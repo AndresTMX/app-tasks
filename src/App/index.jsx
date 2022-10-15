@@ -9,7 +9,7 @@ import TodoItem from "../components/TodoItem";
 import TodoCounter from "../components/TodoCounter";
 import TodoList from "../components/TodoList";
 import CreateTodoBtn from "../components/CreateTodoBtn";
-import Modal from "../Modal";
+import Modal from "../Modals/modal_1";
 import CloseModal from "../components/CloseModal";
 //State Aplication Components
 import TodoForm from "../components/TodoForm";

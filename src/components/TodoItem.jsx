@@ -29,19 +29,19 @@ const ContentItem = styled.div`
 
 const ContentIconCheck = styled.span`
   display: flex;
-  background-color: ${(props) => (props.completed === true ? "green" : "red")};
+  background-color: ${(props) => (props.completed === true ? "#5333ed" : "#0f0c29")};
   padding: 8px;
   border-radius: 4px;
   color: white;
   :hover {
-    border: solid 2px #ffffff93;
+    border: solid 1px #5333ed;
   }
 `;
 
 const ContentIconDelete = styled.span`
   cursor: pointer;
   :hover {
-    color: red;
+    color: white;
   }
 `;
 
@@ -52,7 +52,7 @@ const Item = styled.li`
   height: 20px;
   padding: 10px;
   margin: 15px;
-  background-color: #f5f5f5da;
+  background-color:#5333ed;
   border-radius: 4px;
   color: black;
   align-items: center;
